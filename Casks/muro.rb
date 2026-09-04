@@ -1,6 +1,6 @@
 cask "muro" do
-  version "3.0"
-  sha256 "a7d5e901268c6604aa8ffba06045dd50d273f4f7290342d46b929eb32a6f094e"
+  version "4.0"
+  sha256 "167aabaa5f9dd7c733fec136af3fa2d2231705b23c354714838eb93fac8cfaf8"
 
   url "https://github.com/MrRockySL/Muro/releases/download/v#{version}/Muro-#{version}.dmg"
   name "Muro"
@@ -12,7 +12,6 @@ cask "muro" do
     strategy :github_latest
   end
 
-  depends_on arch: :arm64
   depends_on macos: :sonoma
 
   app "Muro.app"
@@ -20,10 +19,13 @@ cask "muro" do
   uninstall quit: "com.mrrockysl.muro"
 
   zap trash: [
+    "~/Library/Application Scripts/com.mrrockysl.muro.wallpaper-extension",
     "~/Library/Application Support/Muro",
+    "~/Library/Caches/com.mrrockysl.muro",
     "~/Library/Caches/Muro",
     "~/Library/Containers/com.mrrockysl.muro.wallpaper-extension",
     "~/Library/HTTPStorages/com.mrrockysl.muro",
     "~/Library/Preferences/com.mrrockysl.muro.plist",
+    "~/Library/Saved Application State/com.mrrockysl.muro.savedState",
   ]
 end
