@@ -1,6 +1,6 @@
 cask "muro" do
-  version "4.0"
-  sha256 "167aabaa5f9dd7c733fec136af3fa2d2231705b23c354714838eb93fac8cfaf8"
+  version "5.0"
+  sha256 "c7d310d8d6177c7cf01a9b7bd3eee94ea5d81812f8543371a29e86de44e160cb"
 
   url "https://github.com/MrRockySL/Muro/releases/download/v#{version}/Muro-#{version}.dmg"
   name "Muro"
